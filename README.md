@@ -1,3 +1,11 @@
+# MNIST Hardware Accelerator on Kria KV260 Vision AI 
+![](https://github.com/TopGun2001/MNIST-Hardware-Accelerator/blob/main/Images/KriaKV260.jpg)
+![](https://github.com/TopGun2001/MNIST-Hardware-Accelerator/blob/main/Images/MNIST.png)
+
+
+## Introduction
+
+
 Our demo uses the PYNQ framework. We have included the relevant files under the Demo folder to run the jupyter notebook if interested.
 
 Demo: Run the jupyter notebook with the relevant bitstream and hardware handoff file in the proper folders. Also comes with weights and biases csv and inputs csv.
