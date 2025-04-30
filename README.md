@@ -20,7 +20,7 @@
 This project demonstrates a __quantized MNIST hardware accelerator__ implemented on the __AMD Kria KV260 Vision AI Starter Kit__, showcasing both performance and efficiency in digit classification using deep learning techniques on FPGAs. 
 
 ## Hardware Architecture
-The model architecture is a 782-512-256-10 MLP, trained with the __AMD Brevitas framework__ for quantization-aware training. This is crucial for FPGA implementation because FPGAs are significantly more efficient at handling __fixed-point integer arithmetic__ compared to __floating-point operations__. Integer math not only reduces resource utilization (e.g., LUTs, DSPs, and BRAM) but also enables faster inference and lower power consumption, making it ideal for deploying deep learning models on hardware accelerators.
+The model architecture is a 784-512-256-10 MLP, trained with the __AMD Brevitas framework__ for quantization-aware training. This is crucial for FPGA implementation because FPGAs are significantly more efficient at handling __fixed-point integer arithmetic__ compared to __floating-point operations__. Integer math not only reduces resource utilization (e.g., LUTs, DSPs, and BRAM) but also enables faster inference and lower power consumption, making it ideal for deploying deep learning models on hardware accelerators.
 
 ## Hardware Implementation Types
 Two hardware implementations of the model were developed:
