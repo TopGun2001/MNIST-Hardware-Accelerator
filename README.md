@@ -34,7 +34,6 @@ Two hardware implementations of the model were developed:
 | HLS | 10000 | __*4.14 seconds*__ | __*0.000414 seconds*__ |
 | RTL | 10000 | 35.20 seconds | 0.003520 seconds |
 
-
 ## Conclusion
 Both the software and hardware implementations achieved a high classification accuracy of 96.85% over 10,000 MNIST inferences, validating the correctness of the model across all platforms.
 
@@ -42,10 +41,22 @@ The HLS-based design delivered excellent performance, achieving an almost 10× s
 
 However, the RTL-based design did not yield a significant speedup. Despite being functionally correct, the RTL implementation encountered resource bottlenecks, particularly with LUTs and BRAMs, which reached near 100% utilization. These constraints prevented effective pipelining and limited parallel execution, ultimately restricting performance gains.
 
-## Important Folders
-- Demo: Run the jupyter notebook with the relevant bitstream and hardware handoff file in the proper folders. Also comes with weights and biases csv and inputs csv.
-- HLS: Contains Vitis files for the HLS IP.
-- RTL: Contains Verilog/SystemVerilog files used for the RTL IP. Also includes the relevant testbench for the module in each of the folders.
+## Repository Structure
+1. __Demo__: Contains Jupyter Notebook program to run. Bitstreams and Hardware Handoff files. Input, weights and biases csv files.
+   - Place all the files in the same folder as the notebook.
+   - .bit and .hwh must have same names else there wil be an error.
+   - Run each cell in the notebook for inferencing.
+
+2. __HLS__: Contains Vitis files for the HLS IP.
+   - Open Vitis HLS IDE, both old and new versions should work.
+   - Add the source, header and test files to project.
+   - Select correct part number `xck26-sfvc784-2LV-c` corresponding to Kria KV260 Vision AI starter kit.
+   - Now you can run simulation, synthesis, C/RTL co-simulation etc.
+     
+3. __RTL__: Contains Verilog/SystemVerilog files used for the RTL IP. Also includes the relevant testbench for the module in each of the folders.
+   - Open Vivado IDE and add all the design and testbench files.
+   - Select the same part number corresponding to the board.
+   - You can perform the whole design flow upto bitstream generation
 
 ## Contributors
 We are Computer Engineering students (Class of 2025) from the National University of Singapore.
